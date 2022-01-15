@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4{
+    font-family: "Sofia", sans-serif;
+}
+p{
+    font-family: "Trirong", serif;
+    font-size: 1.5em;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-right: 25px;
+}
+nav{
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.half-width{
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.anchor-button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    align-content: center;
+    text-decoration: none;
+    background-color:  #049bf1;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+}
+.start h1{
+    font-size: 3em;
+    margin-bottom: 20px;;
+}
+.start{
+    width: 50%;
+}
+#fimage{
+    width: 500px;
+}
+.pcollection h2{
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.see{
+    display: flex;
+    width: 75%;
+    justify-content: end;
+    color: blue;
+}
+.photo-frame{
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.photo img{
+    width: 100%;
+    border-radius: 10px;
+}
+.pcollection{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.photo-album p{
+    margin-top: 3pt;
+}
+.photo-detail h3, h4{
+    margin-top: 5px;
+}
+.photo-detail p{
+    margin-top: 5px;
+    width: 80%;
+    color: rgb(110, 108, 110);
+}
+.star {
+    color: yellow;
+    font-size:20px
+  }
+.photo-album{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.fproducts{
+    margin: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lstart{
+    width: 40%;
+}
+.lstart h1{
+    margin-bottom: 1em;
+}
+footer{
+    background-color: #050433;
+    text-align: center;
+    color: blanchedalmond;
+    padding: 1.5em;
+    font-size: 1em;
+}
+.footericon{
+    margin: 10px;
+}
+.fade{
+    text-decoration: none;
+    background-color: rgb(12, 16, 75);
+    color: white;
+    padding: 7px;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width:689px) and (max-width:1070px) {
+    .start{
+        width: 100%;
+        text-align: center;
+    }
+
+    .pcollection h2{
+        text-align: center;
+    }
+
+    .photo-album{
+        width: 100%;
+        margin-left: 50px;
+        
+    }
+    .half-width{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .anchor-button{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 28vh;
+    }
+    .fproducts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .lstart{
+        width: 100%;
+        text-align: center;
+        margin-left: 1.5em;
+    }
+    .fproducts img{
+        width: 100%;
+        margin-left: 1.5em;
+    }
+    
+    .see{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+    }
+    footer{
+        width: 100%;
+    }
+    #fimage{
+        width: 100%;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        font-weight: small;
+        font-size: 8px;
+        margin-right: 2px;
+    }
+}
+
+@media (max-width:480px) {
+    .start{
+        width: 100%;
+        text-align: center;
+    }
+    .half-width{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .anchor-button{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        margin-left: 10vh;
+        margin-bottom: 10px;
+    }
+    #fimage{
+        width: 100%;
+    }
+    .photo-frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .photo-album{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .fproducts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .lstart{
+        width: 100%;
+        text-align: center;
+        margin-left: 1.5em;
+    }
+    .fproducts img{
+        width: 100%;
+        margin-left: 1.5em;
+    }
+    
+    .see{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+    }
+    footer{
+        width: 100%;
+    }
+    nav a{
+        text-decoration: none;
+        color: black;
+        font-weight: small;
+        font-size: 8px;
+        margin-right: 2px;
+    }
+}
+
+.animate-charcter{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+      font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
