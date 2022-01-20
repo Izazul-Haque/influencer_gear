@@ -1,6 +1,9 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+}
+header, main{
+    padding: 20px;
 }
 h1, h2, h3, h4{
     font-family: "Sofia", sans-serif;
@@ -9,7 +12,10 @@ p{
     font-family: "Trirong", serif;
     font-size: 1.5em;
 }
-
+nav{
+    display: flex;
+    justify-content: space-between;
+}
 nav a{
     text-decoration: none;
     color: black;
@@ -17,53 +23,47 @@ nav a{
     font-size: 1.5em;
     margin-right: 25px;
 }
-nav{
-    margin: 2em;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
 .half-width{
-    margin: 2em;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+}
+.start h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+#fimage{
+    width: 500px;
 }
 .anchor-button{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 150px;
     height: 30px;
     margin-top: 20px;
     padding: 5px;
-    align-content: center;
-    text-decoration: none;
     background-color:  #049bf1;
     border-radius: 50px;
+}
+.anchor-button a{
+    background-color: transparent;
     color: white;
+    text-decoration: none;
     font-weight: 700;
 }
-.start h1{
-    font-size: 3em;
-    margin-bottom: 20px;;
-}
-.start{
-    width: 50%;
-}
-#fimage{
-    width: 500px;
+.anchor-button i{
+    display: inline-block;
+    margin-left: 1rem;
 }
 .pcollection h2{
-    font-weight: bolder;
-    font-size: 2em;
-    margin-bottom: 1em;
+    margin: 10px 0;
+    text-align: center;
 }
-.see{
+.photo-album{
     display: flex;
-    width: 75%;
-    justify-content: end;
-    color: blue;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .photo-frame{
     width: 300px;
@@ -73,35 +73,19 @@ nav{
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.photo img{
-    width: 100%;
-    border-radius: 10px;
-}
-.pcollection{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-.photo-album p{
-    margin-top: 3pt;
-}
-.photo-detail h3, h4{
-    margin-top: 5px;
-}
-.photo-detail p{
-    margin-top: 5px;
-    width: 80%;
-    color: rgb(110, 108, 110);
-}
-.star {
+.star{
     color: yellow;
-    font-size:20px
-  }
-.photo-album{
+    font-size: 20px;
+}
+.seemore h4 {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+}
+.seemore i{
+    background-color: transparent;
+    margin-left: 5px;
 }
 .fproducts{
     margin: 2em;
@@ -110,12 +94,28 @@ nav{
     align-items: center;
     flex-wrap: wrap;
 }
-
 .lstart{
     width: 40%;
 }
 .lstart h1{
     margin-bottom: 1em;
+}
+.last-anchor-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    background-color:  #049bf1;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.last-anchor-button i{
+    display: inline-flex;
+    margin-left: 1rem;
 }
 footer{
     background-color: #050433;
@@ -136,62 +136,13 @@ footer{
     border-radius: 50%;
 }
 
-@media only screen and (min-width:689px) and (max-width:1070px) {
-    .start{
-        width: 100%;
-        text-align: center;
+@media (max-width:688px) {
+    body, header, main{
+        padding: 0;
+        margin: 0;
     }
-
-    .pcollection h2{
-        text-align: center;
-    }
-
-    .photo-album{
-        width: 100%;
-        margin-left: 50px;
-        
-    }
-    .half-width{
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .anchor-button{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-left: 28vh;
-    }
-    .fproducts{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-    }
-    .lstart{
-        width: 100%;
-        text-align: center;
-        margin-left: 1.5em;
-    }
-    .fproducts img{
-        width: 100%;
-        margin-left: 1.5em;
-    }
-    
-    .see{
-        display: flex;
-        width: 100%;
-        justify-content: end;
-    }
-    footer{
-        width: 100%;
-    }
-    #fimage{
-        width: 100%;
+    nav{
+        padding: 20px;
     }
     nav a{
         text-decoration: none;
@@ -199,72 +150,41 @@ footer{
         font-weight: small;
         font-size: 8px;
         margin-right: 2px;
+    }
+    .half-width{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        text-align: center;
+        font-size: small;
+    }
+    .start h1{
+        font-size: 2rem;
+    }
+    #fimage{
+        width: 100%;
+    }
+    .anchor-button {
+        display: inline-flex;
+    }
+    .photo img{
+        width: 100%;
+    }
+    .seemore h4{
+        width: 100%;
+    }
+    .lstart{
+        width: 100%;
+        text-align: center;
+        font-size: small;
+    }
+    .last-anchor-button{
+        display: inline-flex;
     }
 }
 
-@media (max-width:480px) {
-    .start{
-        width: 100%;
-        text-align: center;
-    }
-    .half-width{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .anchor-button{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 50%;
-        margin-left: 10vh;
-        margin-bottom: 10px;
-    }
-    #fimage{
-        width: 100%;
-    }
-    .photo-frame{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        border-radius: 5%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .photo-album{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
-    }
-    .fproducts{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-    }
-    .lstart{
-        width: 100%;
-        text-align: center;
-        margin-left: 1.5em;
-    }
-    .fproducts img{
-        width: 100%;
-        margin-left: 1.5em;
-    }
-    
-    .see{
-        display: flex;
-        width: 100%;
-        justify-content: end;
-    }
-    footer{
-        width: 100%;
+@media only screen and (min-width:689px) and (max-width:1070px) {
+    nav{
+        padding: 20px;
     }
     nav a{
         text-decoration: none;
@@ -272,6 +192,35 @@ footer{
         font-weight: small;
         font-size: 8px;
         margin-right: 2px;
+    }
+    .half-width{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        text-align: center;
+        font-size: small;
+    }
+    .start h1{
+        font-size: 3rem;
+    }
+    #fimage{
+        width: 100%;
+    }
+    .anchor-button {
+        display: inline-flex;
+    }
+    .fproducts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .lstart{
+        width: 100%;
+        text-align: center;
+    }
+    .last-anchor-button {
+        display: inline-flex;
+        margin-bottom: 20px;
     }
 }
 
@@ -295,9 +244,8 @@ footer{
         display: inline-block;
       font-size: 190px;
 }
-
 @keyframes textclip {
-  to {
-    background-position: 200% center;
+    to {
+      background-position: 200% center;
+    }
   }
-}
